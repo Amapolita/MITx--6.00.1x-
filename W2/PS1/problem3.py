@@ -22,8 +22,9 @@ If you've spent more than a few hours on this problem, we suggest that you move 
 If you have time, come back to this problem after you've had a break and cleared your head.
 
 '''
-first,last = 0,0
 s = 'azcbobobegghakl'
+first,last = 0,0
+long_string = []
 for letter in range(len(s)+1):
     if  letter !=(len(s)) and ord(s[letter])>= ord(s[letter-1]):
             last = letter
