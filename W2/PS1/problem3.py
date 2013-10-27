@@ -24,12 +24,11 @@ If you have time, come back to this problem after you've had a break and cleared
 '''
 s = 'azcbobobegghakl'
 first,last = 0,0
-long_string = []
+long_string= []
 for letter in range(len(s)+1):
-    if  letter !=(len(s)) and ord(s[letter])>= ord(s[letter-1]):
+    if  letter !=(len(s)) and ord(s[letter-1]) <= ord(s[letter]):
             last = letter
     else:
             long_string.append(s[first:last+1])
             first,last = letter, letter
 print "Longest substring in alphabetical order is: "  + max(long_string, key=len)
-
